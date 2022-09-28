@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Conceitos em JS</title>
+
+    <script>
+        // let o1 = {
+        //     cor: `azul`,
+        //     msg: `pax`,
+        //     iluminar: function () {
+        //         console.log(`iluminado`)
+        //     }
+        // }
+
+        // let ob1 = function () {
+        //     this.cor = `azul`,
+        //         this.msg = `pax`,
+        //         this.iluminar = function () {
+        //             console.log(`iluminado`)
+        //         }
+        // }
+
+        // class objeto() {
+        //     constructor(){
+        //         this.cor = `azul`
+        //         this.msg = `pax`
+        //     }
+
+        //     iluminar() {
+        //         console.log(`iluminado`)
+        //     }
+        // }
+
+        // let o2 = new obj()
+        // let o3 = new objeto()
+
+        // console.log(o1)
+        // console.log(o2)
+        // console.log(o3)
+
+       // __proto__
+		Object.prototype.attr500 = `error` //cuidado
+		let obj = { attr100: `success` }
+		let obj2 = { __proto__: obj, attr200: `danger` }
+		let obj3 = { __proto__: obj2, attr300: `warning` }
+
+		console.log(obj.attr100, obj.attr500)
+		console.log(obj2.attr100)
+		console.log(obj3.attr500)
+
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

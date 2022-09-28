@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eventos de formulario</title>
+        <script type="text/javascript">
+            
+        </script>
+    </head>    
+    <body>
+        <form>
+            <!-- ação disparado ao clicar no input -->
+            <input onfocus="console.log('foco dado!')" type="text" name="" placeholder="onfocus">
+
+            <!-- ação disparada ao sair do input -->
+            <input onblur="console.log('foco desdado!')" type="text" name="" placeholder="onblur">
+
+            <!-- ação disparada ao trocar opção -->
+            <select onchange="console.log('alteração do candango')">
+                <option> -- Selecione uma opção -- </option>
+                <option value='1'>Letra 1</option>
+                <option value='A'>Numero A</option>
+            </select>
+        </form>
+    </body>
+</html>

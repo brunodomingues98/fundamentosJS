@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop 02</title>
+	
+	<style>
+		td {
+			padding: 10px;
+		}
+		/*
+		Esquema do Brunão
+		td:nth-child(odd) {
+			background-color: aqua;
+		}
+		*/
+
+		.d1, .d17 {background-color: red;}
+		.d2, .d16 {background-color: green;}
+		.d3, .d15 {background-color: blue;}
+		.d4, .d14 {background-color: aqua;}
+		.d5, .d13 {background-color: yellow;}
+		.d6, .d12 {background-color: purple;}
+		.d7, .d11 {background-color: brown;}
+		.d8, .d10 {background-color: pink;}
+		.d9 {background-color: gray;}
+
+
+	</style>
+
+	<script>
+		let x = 1
+			
+		document.write("<table border='1' align='center'>")
+
+		do {
+			// x = 2
+			document.write("<tr>")
+			for (let y = 1; y <= 9; y++) {
+				// y = 1  -  x = 2
+				idcss = (x>1) ? y+x-1 : y; 
+				document.write("<td class='d"+idcss+"'>")
+				document.write(y+' * '+x+' = '+(x*y))	
+				document.write("</td>")
+			}		
+			x++
+			document.write("</tr>")
+		} while (x<=9)
+
+		document.write("</table>")
+	</script>
+</head>
+<body>
+</body>
+</html>

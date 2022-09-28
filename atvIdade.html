@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Atividade</title>
+		<script type="text/javascript">
+            function verificaIdade() {
+                var idade = document.getElementById('idade').value;
+
+                if (idade >= 60) {
+                    document.getElementById('resultado').innerHTML = 'Idoso';
+                } else if (idade >= 30) {
+                    document.getElementById('resultado').innerHTML = 'Adulto';
+                } else if (idade >= 15) {
+                    document.getElementById('resultado').innerHTML = 'Jovem';
+                } else if (idade >= 1) {
+                    document.getElementById('resultado').innerHTML = 'Criança';
+                } else {
+                    document.getElementById('resultado').innerHTML = 'Me ajuda aí';
+                }
+            }
+        </script>
+	</head>
+	<body>
+		<h1>Atividade</h1>
+
+        <input type="text" id="idade"> 
+        <button onclick="verificaIdade()">Verificar</button>
+        <h1 id="resultado"></h1>
+
+	</body>
+</html>

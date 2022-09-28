@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Funções callback</title>
+		<script type="text/javascript">
+			function exibirTarefa(cod, callbackSucesso, callbackErro){
+				// retorna a tarefa
+				if (true)
+					callbackSucesso('Tarefa','Descrição');
+				else 
+					callbackErro('erro ao encontrar tarefa');
+			}
+
+			var cbSucesso = function(nome,desc) {
+				document.write("<h1>"+nome+"</h1>");
+				document.write("<br>");
+				document.write("<h6>"+desc+"</h6>");
+			}
+
+			var cbErr = function(err) {
+				document.write("<h3>Erro: "+err+"</h3>");
+			}
+
+			exibirTarefa(id, cbSucesso, cbErr);
+        </script>
+	</head>
+	<body>
+		<h1>Funções callback</h1>
+	</body>
+</html>

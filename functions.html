@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos JS</title>
+	<script>
+		function minhaFuncao() {
+			var r = 0
+			//console.log(arguments)
+			for (var i in arguments) {
+				//console.log(arguments[i])
+				r += arguments[i]
+			}
+		}
+		console.log(minhaFuncao(5,7,12,13.5))
+	</script>
+</head>
+<body>
+
+</body>
+</html>

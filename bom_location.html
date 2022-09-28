@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conceitos JS</title>
+        <script>
+            // setTimeout(function() {
+            //     document.write('Olá mundo via timeout!' + '<br>')
+            // }, 5000)
+            
+            var cont = 10
+            var time = setInterval(function(){
+                document.write(cont)
+                cont --
+                if (cont == 0) {
+                    clearInterval(time)
+                }
+            }, 1000)
+
+            // setInterval(function(){
+            //     document.write('Olá mundo via interval' + '<br>')
+            // }, 2000)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

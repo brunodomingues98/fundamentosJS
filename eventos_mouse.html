@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eventos de mouse</title>
+        <script type="text/javascript">
+            var txt = "Evento Disparado"
+            function acao1() { console.log(txt + ' 1') }
+            function acao2() { console.log(txt + ' 2') }
+            function acao3() { console.log(txt + ' 3') }
+        </script>
+        <style>
+            div {
+                height: 150px;
+                width: 150px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- click do mouse -->
+        <div onclick="acao1()" style="background-color: dimgray;"></div> 
+        <!-- dois clicks -->
+        <div ondblclick="acao2()" style="background-color: skyblue;"></div>
+        <!-- entrar no elemento com o passar do mouse por cima -->
+        <div onmouseover="acao3()" style="background-color: seagreen;"></div>
+        <!-- sair de cima do elemento com o mouse -->
+        <div onmouseout="acao2()" style="background-color: indianred;"></div>
+    </body>
+</html>

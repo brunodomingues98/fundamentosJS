@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Operadores Lógicos</title>
+		<script type="text/javascript">
+			/**
+             * && = verdadeiro se todas as expressores forem verdadeiras
+             * || = verdadeiro se ao menos uma expressao for verdadeira
+             * !  = inverte o resultado da expressao
+             */
+
+            var nota1 = 4;
+            var nota2 = 5;
+            var media = (nota1 + nota2) /2;
+            var faltas = 10;
+            var faltas_maxima = 15;
+
+            if ( !(media > 6 && faltas) < faltas_maxima) {
+                document.write("aprovado")
+            } else {
+                document.write("recuperação")
+            }
+
+            // operador ternario
+            var resultado = (media > 6) ? 'aprovado' : 'reprovado';
+            document.write(resultado);
+		</script>
+	</head>
+	<body>
+		<h1>Operadores Lógicos</h1>
+	</body>
+</html>

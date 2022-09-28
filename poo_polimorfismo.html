@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conceitos JS</title>
+
+        <script>
+            class Animal {
+                constructor(t,p) {
+                    this.tamanho = t 
+                    this.peso = p
+                }
+
+                dormir() {
+                    console.log(`dormindo...`)
+                }
+            }
+
+            class Passaro extends Animal {
+                constructor(t,p,b) {
+                    super(t,p)
+                    this.bico = true
+                    this.pena = true
+                }
+
+                voar() {
+                    console.log(`voando...`)
+                }
+            }
+
+            let p = new Passaro(10, 10, 1)
+            p.voar()
+            p.dormir()
+            console.log(`--------------------------------------------`)
+
+            class Papagaio extends Passaro {
+                constructor(t,p, cor) {
+                    super(t, p)
+                    this.cor = c
+                }
+
+                repetir() {
+                    console.log(`repetindo`)
+                }
+            }
+
+            class Avestruz extends Passaro {
+                constructor (t, p, c) {
+                    super(t,p)
+                    this.cor = c
+                }
+
+                enterraCabeca(){
+                    console.log(`enterrando a cabeca`)
+                }
+
+                voar(){
+                    consoel.log(`não sabe voar`)
+                }
+            }
+
+            let a = new Avestruz(8, 35, 'branco')
+            let b = new Papagaio(8, 35, 'azul')
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

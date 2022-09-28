@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atividade eventos de formulario</title>        
+    </head>    
+    <body>
+        <input id="obj" type="text" placeholder="Lista de objetos" />
+        <button onclick="add()">Adicionar</button>
+        <button onclick="ordenar()">Ordenar</button>
+
+        <script>
+            var objetos = Array('Cadeira', 'Impressora', 'Garfo');
+
+            function add() {
+                var obj = document.getElementById('obj').value;
+                if (obj != '') {
+                    if(objetos.indexOf(obj) !== -1) {
+                        alert('Objeto já existe');
+                    } else {
+                        objetos.push(obj);
+                        console.log(objetos);
+                        document.getElementById('obj').value = '';
+                    }
+                } else {
+                    alert('Digite um objeto');
+                }
+            }
+            function ordenar(){
+                objetos.sort();
+                console.log(objetos);
+            }
+        </script>
+    </body>
+</html>

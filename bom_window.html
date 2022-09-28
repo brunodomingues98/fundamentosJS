@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos JS</title>
+	<script>
+		function criarJanela() {
+			janela = window.open('http://google.com')
+		}
+		function fecharJanela() {
+			janela.close()
+		}
+	</script>
+
+</head>
+<body>
+	<button onclick="criarJanela()">
+		Criar Janela
+	</button>
+	<button onclick="fecharJanela()">
+		Fechar Janela
+	</button>
+	<button onclick="window.print()">Imprimir</button>
+</body>
+</html>

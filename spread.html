@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // spread
+            // ...nome
+            // let nome = `Bruno Domingues Dos Santos`
+            // console.log(nome)
+            // console.log(...nome)
+            // console.log([...nome])
+
+
+            let lista_cursos_favoritos = [
+                'ADS', 
+                'JS', 
+                'TypeScript',
+                'Python'
+            ]
+
+            let lista_cursos_carrinho = [
+                '.Net',
+                'Dark',
+                'PHP',
+                'Banco de dados'
+            ]
+
+            let lista_completa = [
+                'Redes',
+                'Segurança de dados',
+                ...lista_cursos_carrinho,
+                ...lista_cursos_favoritos
+            ]
+
+            console.log(lista_completa)
+
+            let computador = {
+                placa_mae: `B450M`,
+                memoria_ram: `16`, 
+                memoria_rom: `2t`,
+                processador: `3600x`,
+                placa_video: `16060Super`
+            }
+
+            let computador_carrinho = {
+                gabinete: `infinity mtr`,
+                fan: `18`,
+                water_cooler: ``,
+                w_c_led: true,
+                alimentacao: `900`,
+                alimentacao_modular: true,  
+                drive_b_ray: true,
+                teclado: `redragon`,
+
+            }
+
+            let lista_completa_computador = {
+                ...computador,
+                ...computador_carrinho
+            }
+
+            console.log(lista_completa_computador)
+
+            // rest
+            function adicao(...num) {
+                let result = 0
+                console.log(num)
+                num.forEach(r => result += r)
+                return result
+            }
+
+            console.log(adicao(10, 15, 17, 2, 3, 100))     
+
+
+            function multiplicacao_por_soma(primeir_elemento,...nums) {
+			    return nums.reduce((acumulator,previews) => acumulator += primeir_elemento * previews,0)
+		    }
+
+            console.log(multiplicacao_por_soma(2, 10, 4, 3, 7, 9, 177, 777))
+
+        </script>
+    </head>
+    <body></body>
+</html>

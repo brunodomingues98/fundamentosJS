@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eventos de teclado</title>
+        <script type="text/javascript">
+            function eventoTeclado(){
+                console.log(event.key);
+                if (event.key === '0') {
+                    alert('Tecla 0');
+                }
+            }
+
+            function acao() {
+                console.log('Ação ao pressionar tecla disparada');
+            }
+
+            function acao2() {
+                console.log('Ação ao soltar tecla disparada');
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Dispara ação ao pressionar qualquer tecla -->
+        <input onkeydown="eventoTeclado()" type="text" name="" placeholder="down">
+        <!-- Dispara ação ao pressionar tecla -->
+        <input onkeypress="acao()" type="text" name="" placeholder="press">
+        <!-- Dispara ação ao parar de pressionar tecla -->
+        <input onkeyup="acao2()" type="text" name="" placeholder="up">
+    </body>
+</html>

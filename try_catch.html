@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conceitos JS</title>
+	<script>
+		//banco
+		var clientes = Array()
+
+		clientes[1] = Array()
+		clientes[1]['nome'] = 'Robson Kerner'
+		clientes[1]['conta'] = '0002358-2'
+		clientes[1]['agencia'] = '1223'
+		clientes[1]['saldo'] = '137000000,00'
+
+		function getCliente(clientes) {
+			try {
+				console.log(clientes[0]['nome'])
+			} catch(erro) {
+				tratativaErro(erro)
+				console.log('erro sendo tratado')
+				throw new Error('Estamos resolvendo este erro')
+			} finally {
+				console.log('Sempre executa')
+			}
+		}
+
+		function tratativaErro(erro) {
+			console.log(erro)
+		}
+
+		getCliente(clientes)
+	</script>
+</head>
+<body>
+
+</body>
+</html>

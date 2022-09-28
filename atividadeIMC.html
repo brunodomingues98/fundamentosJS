@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Atividade IMC</title>
+		<script type="text/javascript">
+           function verificaimc() {
+                const nomeUsuario = document.getElementById('nome').value;
+                const pesoRecebido = document.getElementById('peso').value;
+                const alturaRecebida = document.getElementById('alturacm').value;
+                const altura = parseFloat(alturaRecebida);
+                const peso = parseFloat(pesoRecebido);
+                const alturaMetros = alturaRecebida / 100;
+                const imc = peso / (alturaMetros * alturaMetros);
+
+               if (imc < 16 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) + ', você está com Baixo Peso Muito Grave, recomendamos que você procure ajuda profissional';
+               } else if ( imc >= 16 && imc <= 16.99 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) + ', você está com Baixo Peso Grave, continue assim!';
+               } else if ( imc >= 17 && imc <= 18.49 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) +  ', você está com Baixo Peso, recomendamos que você procure ajuda profissional';
+               } else if ( imc >= 18.50 && imc <= 24.99 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) +  ', você está com Peso Normal, recomendamos que você procure ajuda profissional';
+               } else if ( imc >= 25 && imc <= 29.99 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) +  ', você está Sobrepeso, recomendamos que você procure ajuda profissional';
+               } else if ( imc >= 30 && imc <= 34.99 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) +  ', você está com Obesidade Grau I, recomendamos que você procure ajuda profissional';
+               } else if ( imc >= 35 && imc <= 39.99 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) +  ', você está com Obesidade Grau II ou Mórbida, recomendamos que você procure ajuda profissional';
+               } else if ( imc > 40 ) {
+                    document.getElementById('resultado').innerHTML = nomeUsuario + ', seu IMC é de:' + imc.toFixed(2) +  ', você está com Obesidade Grau III ou Mórbida, recomendamos que você procure ajuda profissional';
+               } else {
+                    document.getElementById('resultado').innerHTML = 'Entrada não suportada pelo sistema, por favor, tente novamente';
+               }
+           }
+        </script>
+	</head>
+	<body>
+		<main>
+            <h1>Verificação de IMC (Índice de massa corporal)</h1>
+        <p>
+            O índice de massa corporal é uma medida internacional usada para calcular se uma pessoa está no peso ideal.
+            <br>
+            O índice de massa corpôrea determina o nível de saúde de uma pessoa, considerando o cálculo de seu peso atual, 
+            pela sua altura, e assim, determinando o seu estado de saúde considerando os padrões instituídos pela 
+            organisação mundial da saúde.
+        </p>
+        <h2>Tabela de interpretação do IMC</h2>
+        <table class="tabela">
+            <tr>
+                <th>Classicação</th>
+                <th>IMC</th>
+            </tr>
+            <tr style="background-color: rgba(207, 206, 206, 0.404);">
+                <td>Abaixo do Peso</td>
+                <td>Abaixo 18,5</td>
+            </tr>
+            <tr style="background-color: rgba(100, 111, 204, 0.404);">
+                <td>Peso Normal</td>
+                <td>18,5 - 24,9</td>
+            </tr>
+            <tr style="background-color: rgba(207, 206, 206, 0.404);">
+                <td>Sobrepeso</td>
+                <td>25 - 29,9</td>
+            </tr>
+            <tr style="background-color: rgba(100, 111, 204, 0.404);">
+                <td>Obesidade Grau I</td>
+                <td>30 - 34,9</td>
+            </tr>
+            <tr style="background-color: rgba(207, 206, 206, 0.404);">
+                <td>Obesidade Grau II</td>
+                <td>35 - 39,9</td>
+            </tr>
+            <tr style="background-color: rgba(100, 111, 204, 0.404);">
+                <td>Obesidade Grau III</td>
+                <td>Maior ou Igual 40</td>
+            </tr>
+        </table>
+
+        <h2>Calcule aqui seu IMC</h2>
+        <label>Informe seus dados, por favor</label>
+        <br>
+        <input placeholder="Informe seu nome" type="text" name="nome" id="nome" />
+        <br>
+        <input placeholder="Sua altura em CM" type="text" name="alturacm" id="alturacm"/>
+        <br>
+        <input placeholder="Seu peso" type="text" name="peso" id="peso" />
+        <br>
+        <button onclick="verificaimc()">Calcular o IMC</button>
+        <br><br>
+        <h1 id="resultado"></h1>
+        </main>
+	</body>
+</html>
+
+<style>
+    .tabela {
+        width: 50%;
+        border: 1px solid #000;
+        margin-bottom: 5%;
+    }
+
+    .tabela td, th  {
+        border: 1px solid #000;
+    }
+
+    h1#resultado {
+        color: #ff0000
+    }
+
+    p {
+        text-align: left;
+    }
+
+    input {
+        width: 25%;
+        margin-top: 1%;
+        border: 1px solid #000;
+        border-radius: 9px;
+        height: 25px;
+    }
+
+    button {
+        margin-top: 1%;
+        margin-left: 8%;
+        border-radius: 9px;
+        border: 1px solid;
+        width: 10%;
+        height: 30px;
+        color:#000;
+        background-color:rgba(100, 111, 204, 0.404);
+    }
+</style>
